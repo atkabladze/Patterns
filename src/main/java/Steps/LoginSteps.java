@@ -1,17 +1,19 @@
 package Steps;
 
+import Data.LoginData;
 import Pages.LoginPage;
 
 public class LoginSteps {
     LoginPage loginPage = new LoginPage();
+    LoginData loginData  = new LoginData();
 
-    public LoginSteps setUserName(String userName) {
-        loginPage.userNameItem.setValue(userName);
+    public LoginSteps setUserName() {
+        loginPage.userNameItem.setValue(loginData.userName);
         return this;
     }
 
-    public LoginSteps setPassword(String password) {
-        loginPage.userNameItem.setValue(password);
+    public LoginSteps setPassword() {
+        loginPage.passwordItem.setValue(loginData.password);
         return this;
     }
 }

@@ -5,10 +5,11 @@ import org.testng.annotations.Test;
 public class LoginTests {
     LoginSteps loginSteps = new LoginSteps();
     DashboardSteps dashboardSteps = new DashboardSteps();
+
     @Test
     public void successLogin(){
-         loginSteps.setUserName("test")
-                 .setPassword("test123");
+         loginSteps.setUserName()
+                 .setPassword();
          dashboardSteps.validateWelcomeText();
     }
 }
